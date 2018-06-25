@@ -1,0 +1,13 @@
+Source files in TPCCATracker and Vc is not under experts' control and
+they are not updated frequently. Now store them in tgz files.
+
+To build HLT binaries
+
+0. cvs update -P
+   The -P flag prevent to checkout empty/removed directories in CVS.
+1. tar zxf Vc.0.7.2.tgz
+2. tar zxf TPCCATracker.Rev23243.tgz 
+3. If on daqman, source compile_settings.csh
+4. If on RCF nodes, i.e. rcas60xx, need to switch to 64bit by running  "setup 64b"
+5. If for offline tests, uncomment line 88 of Makefile to enable stand alone mode.
+6. run build_L4_HLT.csh
